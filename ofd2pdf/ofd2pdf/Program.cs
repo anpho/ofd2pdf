@@ -1,5 +1,6 @@
 ﻿using Spire.Pdf.Conversion;
 using System;
+using System.Windows.Forms;
 
 namespace ofd2pdf
 {
@@ -11,6 +12,7 @@ namespace ofd2pdf
             {
                 Console.WriteLine("OFD TO PDF 转换工具");
                 Console.WriteLine("使用方式： ofd2pdf.exe <ofdfile>");
+                MessageBox.Show("使用方式： ofd2pdf.exe <ofdfile> ，或者配置为OFD文件打开方式", "OFD TO PDF 转换工具");
             }
             else
             {
@@ -19,12 +21,14 @@ namespace ofd2pdf
                 {
                     Console.WriteLine($"#转换 {ofdfile}");
                     OfdConverter oc = new OfdConverter(ofdfile);
-                    oc.ToPdf(ofdfile+".pdf");
+                    string newFilename = ofdfile.Replace(".ofd", ".pdf");
+                    oc.ToPdf(newFilename);
                     Console.WriteLine($"#完成 {ofdfile}");
+
                 }
                 else
                 {
-                    Console.WriteLine($"{ofdfile} 不是OFD文件");
+                    MessageBox.Show($"{ofdfile} 不是OFD文件", "OFD TO PDF 转换工具");
                 }
             }
         }
