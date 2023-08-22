@@ -122,5 +122,10 @@
   <ItemGroup>
     <None Include="Resources\ofd.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="license.elic.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
