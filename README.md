@@ -1,5 +1,10 @@
 # ofd2pdf
+
 OFD->PDF转换工具（CLI）
+
+因授权问题，请移步 [https://github.com/taurusxin/Ofd2Pdf](https://github.com/taurusxin/Ofd2Pdf) 。
+
+======================================
 
 >使用 Spire.PDF 实现
 
